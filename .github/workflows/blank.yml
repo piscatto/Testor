@@ -17,10 +17,10 @@ jobs:
                 echo '${{ secrets.DOTENV }}' >> .env
                 
         - name: Dowload File
-          run: node /src/download.js ${{ github.event.inputs.url }}
+          run: node /app/download.js ${{ github.event.inputs.url }}
  
         - name: LS
           run: cd /data && ls -la
           
         - name: Upload to Drive
-          run: node /src/upload.js
+          run: node /data/upload.js
