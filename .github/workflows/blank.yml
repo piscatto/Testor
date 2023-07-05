@@ -21,7 +21,7 @@ jobs:
  
         - name: LS
           if: github.event.inputs.compress == '1'
-          run: cd/data && ls -la
+          run: cd /data && ls -la
           
         - name: Upload to Drive
           run: node /app/upload.js
