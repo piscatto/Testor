@@ -20,7 +20,6 @@ jobs:
           run: node /app/download.js ${{ github.event.inputs.url }}
  
         - name: LS
-          if: github.event.inputs.compress == '1'
           run: cd /data && ls -la
           
         - name: Upload to Drive
